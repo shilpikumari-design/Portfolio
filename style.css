@@ -1,0 +1,189 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center all content horizontally */
+  }
+  
+  /* Header */
+  header {
+    background: #007acc;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    color: #007acc;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  nav button:hover {
+    background: #005f99;
+    color: white;
+  }
+  
+  /* Sections */
+  section {
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px;
+    margin: 20px 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    text-align: left; /* default, override in About/Certificate/Contact */
+  }
+  
+  h2 {
+    color: #0073e6;
+    margin-top: 0;
+  }
+  
+  /* About Me Section - Centered */
+  #about {
+    text-align: center;
+  }
+  
+  #about .profile-img {
+    width: 120px;      /* reduce width */
+    height: 120px;     /* reduce height */
+    border-radius: 50%;
+    margin: 15px auto;
+    border: 2px solid #0073e6; /* thinner border */
+  }
+  
+  
+  .about-line {
+    margin: 5px 0;
+  }
+  
+  .about-links a {
+    display: inline-block;
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+  
+  .about-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .about-contact {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+  
+  /* Projects Section */
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    flex: 1 1 45%;
+    max-width: 45%;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Skills Section - Horizontal 4 cards */
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+  }
+  
+  .skill-card {
+    flex: 1 1 22%; /* 4 cards in one row */
+    max-width: 22%;
+    min-width: 200px; 
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .skill-card ul {
+    margin: 10px 0 0 0;  /* top margin */
+    padding-left: 12px;  /* bullet spacing from left */
+    list-style-position: inside; /* bullet close to text */
+    line-height: 1.6;    /* line spacing for readability */
+  }
+  
+  /* Certificates Section - Centered */
+  #certificate {
+    text-align: center;
+  }
+  
+  #certificate .cert-img {
+    display: block;
+    margin: 15px auto;
+  }
+  
+  /* Contact Section - Centered */
+  #contact {
+    text-align: center;
+  }
+  
+  #contact p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Certificate Image Hover */
+  .cert-img {
+    width: 200px;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: transform 0.3s;
+  }
+  
+  .cert-img:hover {
+    transform: scale(1.1);
+  }
+  
