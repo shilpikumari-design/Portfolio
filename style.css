@@ -52,43 +52,73 @@ h2 {
     margin-top: 0;
 }
 
-/* About Section */
-#about .about-inner {
+/* ----------------------------- */
+/* About/Profile Section */
+#about .about-wrapper {
     display: flex;
     align-items: flex-start;
-    gap: 50px; /* space between image and text */
+    gap: 80px;          /* more space between image and text */
+    max-width: 1000px;  /* same as other sections */
+    margin: 0 auto;     /* center section */
+    padding: 30px 0;
 }
 
 #about .profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 200px;       /* slightly larger, professional */
+    height: 200px;
+    border-radius: 50%; /* circular */
+    object-fit: cover;  /* maintain aspect ratio */
     border: 2px solid #0073e6;
     flex-shrink: 0;
 }
 
 #about .about-text {
-    flex: 1;
+    flex: 1;            /* text takes remaining space */
 }
 
 #about .about-text h2,
 #about .about-text p {
     margin: 5px 0;
+    line-height: 1.6;   /* better readability */
 }
 
-/* Mobile responsive */
+#about .about-links a {
+    display: inline-block;
+    color: #0073e6;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+#about .about-links a:hover {
+    text-decoration: underline;
+}
+
+#about .about-contact {
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-    #about .about-inner {
+    #about .about-wrapper {
         flex-direction: column;
         text-align: center;
+        gap: 30px;       /* smaller gap on mobile */
     }
 
     #about .profile-img {
         margin-bottom: 20px;
+        width: 160px;    /* smaller on mobile */
+        height: 160px;
+    }
+
+    #about .about-text {
+        text-align: center;
     }
 }
 
+/* ----------------------------- */
 /* Projects Section */
 .projects-container {
     display: flex;
@@ -119,6 +149,7 @@ h2 {
     border-radius: 10px;
 }
 
+/* ----------------------------- */
 /* Skills Section */
 .skills-container {
     display: flex;
@@ -152,6 +183,7 @@ h2 {
     line-height: 1.6;
 }
 
+/* ----------------------------- */
 /* Certifications Section */
 #certifiate {
     text-align: center;
@@ -171,6 +203,7 @@ h2 {
     transform: scale(1.1);
 }
 
+/* ----------------------------- */
 /* Contact Section */
 #contact {
     text-align: center;
