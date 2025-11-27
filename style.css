@@ -4,9 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center all content horizontally */
 }
 
 /* Header */
@@ -47,7 +44,7 @@ section {
     background: white;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    text-align: left; /* default, override in About/Certificate/Contact */
+    text-align: left;
 }
 
 h2 {
@@ -55,45 +52,45 @@ h2 {
     margin-top: 0;
 }
 
-/* About Section - Fixed */
+/* About Section */
 #about {
-    display: flex;           /* side by side layout */
-    align-items: flex-start;  /* align text with image top */
-    gap: 20px;               /* space between image and text */
+    display: flex;           
+    align-items: flex-start; 
+    gap: 20px;               
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;          /* center section horizontally */
+    margin: 0 auto;
     padding: 30px 0;
-    text-align: left;
+    text-align: left;        
 }
 
 #about .profile-img {
-    width: 120px;            /* small image */
-    height: 120px;
-    border-radius: 50%;
+    width: 150px;            
+    height: 150px;
+    border-radius: 50%;      
     border: 2px solid #0073e6;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 #about .about-text {
-    flex: 1; /* text takes remaining space */
+    flex: 1;                 
 }
 
 #about p,
 #about h2 {
-    margin: 5px 0;           /* spacing between lines */
+    margin: 5px 0;
 }
 
-/* Responsive for Mobile */
+/* Mobile responsive */
 @media (max-width: 768px) {
     #about {
-        flex-direction: column;  /* stack image and text vertically */
-        text-align: center;      /* center align text on mobile */
+        flex-direction: column;
+        text-align: center;
     }
 
     #about .profile-img {
-        margin-bottom: 15px;     /* spacing below image */
+        margin-bottom: 15px;
     }
 }
 
@@ -127,7 +124,7 @@ h2 {
     border-radius: 10px;
 }
 
-/* Skills Section - Horizontal 4 cards */
+/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -137,9 +134,9 @@ h2 {
 }
 
 .skill-card {
-    flex: 1 1 22%; /* 4 cards in one row */
+    flex: 1 1 22%;
     max-width: 22%;
-    min-width: 200px; 
+    min-width: 200px;
     background: white;
     border-radius: 12px;
     padding: 20px;
@@ -154,37 +151,22 @@ h2 {
 }
 
 .skill-card ul {
-    margin: 10px 0 0 0;  /* top margin */
-    padding-left: 12px;  /* bullet spacing from left */
-    list-style-position: inside; /* bullet close to text */
-    line-height: 1.6;    /* line spacing for readability */
+    margin: 10px 0 0 0;
+    padding-left: 12px;
+    list-style-position: inside;
+    line-height: 1.6;
 }
 
-/* Certificates Section - Centered */
+/* Certifications Section */
 #certifiate {
     text-align: center;
 }
 
 #certifiate .cert-img {
     display: block;
-    margin: 15px auto;
-}
-
-/* Contact Section - Centered */
-#contact {
-    text-align: center;
-}
-
-#contact p {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* Certificate Image Hover */
-.cert-img {
-    width: 200px;
+    margin: 15px auto;  
+    width: 200px;       
     height: auto;
-    margin: 15px;
     border-radius: 10px;
     border: 2px solid #ccc;
     transition: transform 0.3s;
@@ -192,5 +174,15 @@ h2 {
 
 .cert-img:hover {
     transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    font-size: 16px;
+    margin: 5px 0;
 }
 
