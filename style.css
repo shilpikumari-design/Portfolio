@@ -62,26 +62,29 @@ h2 {
 
 /* ----------------------------- */
 /* About/Profile Section */
+/* About/Profile Section */
 #about .about-wrapper {
     display: flex;
-    align-items: center; /* vertically center image with text */
-    gap: 80px;
+    align-items: center; /* vertical center */
+    gap: 100px;          /* space between image and text */
     max-width: 1000px;
     margin: 0 auto;
     padding-bottom: 50px;
 }
 
 #about .profile-img {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 250px;          /* slightly larger */
+    height: 250px;         /* slightly larger */
+    border-radius: 50%;    /* circular shape */
+    object-fit: none;       /* show full image without cropping */
     border: 2px solid #0073e6;
     flex-shrink: 0;
 }
 
+
+
 #about .about-text {
-    flex: 1;
+    flex: 1;             /* text takes remaining space */
 }
 
 #about .about-text p {
@@ -89,6 +92,7 @@ h2 {
     line-height: 1.7;
 }
 
+/* Links & contact */
 #about .about-links a {
     display: inline-block;
     color: #0073e6;
