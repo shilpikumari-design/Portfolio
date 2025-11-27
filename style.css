@@ -52,8 +52,7 @@ h2 {
     margin-top: 0;
 }
 
-/* ----------------------------- */
-/* Section title center */
+/* Center section title */
 .section-title {
     text-align: center;
     margin-top: 0;
@@ -64,18 +63,18 @@ h2 {
 /* About/Profile Section */
 #about .about-wrapper {
     display: flex;
-    align-items: center;       /* vertical center */
-    gap: 80px;                 /* space between image and text */
+    align-items: center;
+    gap: 80px;
     max-width: 1000px;
     margin: 0 auto;
     padding-bottom: 50px;
 }
 
 .profile-img-container {
-    width: 250px;              /* circular frame size */
+    width: 250px;
     height: 250px;
     border-radius: 50%;
-    overflow: hidden;           /* clip image to circle */
+    overflow: hidden;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -84,9 +83,9 @@ h2 {
 }
 
 .profile-img-container img {
-    width: auto;               /* maintain aspect ratio */
-    height: 100%;              /* fit height inside container */
-    object-fit: contain;       /* show full image without cropping */
+    width: auto;
+    height: 100%;
+    object-fit: contain;
 }
 
 #about .about-text {
