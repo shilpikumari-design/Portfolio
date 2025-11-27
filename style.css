@@ -7,22 +7,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* center all content horizontally */
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     background: #007acc;
     padding: 15px 0;
     width: 100%;
     text-align: center;
     color: white;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 0;
-  }
-  
-  nav button {
+}
+
+nav button {
     margin: 0 10px;
     padding: 10px 20px;
     border: none;
@@ -31,15 +31,15 @@ body {
     color: #007acc;
     cursor: pointer;
     font-weight: bold;
-  }
-  
-  nav button:hover {
+}
+
+nav button:hover {
     background: #005f99;
     color: white;
-  }
-  
-  /* Sections */
-  section {
+}
+
+/* Sections */
+section {
     width: 90%;
     max-width: 1000px;
     padding: 30px;
@@ -48,57 +48,64 @@ body {
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     text-align: left; /* default, override in About/Certificate/Contact */
-  }
-  
-  h2 {
+}
+
+h2 {
     color: #0073e6;
     margin-top: 0;
-  }
-  
-  /* About Me Section - Centered */
-  #about {
-    text-align: center;
-  }
-  
-  #about .profile-img {
-    width: 120px;      /* reduce width */
-    height: 120px;     /* reduce height */
+}
+
+/* About Section - Fixed */
+#about {
+    display: flex;           /* side by side layout */
+    align-items: flex-start;  /* align text with image top */
+    gap: 20px;               /* space between image and text */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;          /* center section horizontally */
+    padding: 30px 0;
+    text-align: left;
+}
+
+#about .profile-img {
+    width: 120px;            /* small image */
+    height: 120px;
     border-radius: 50%;
-    margin: 15px auto;
-    border: 2px solid #0073e6; /* thinner border */
-  }
-  
-  
-  .about-line {
-    margin: 5px 0;
-  }
-  
-  .about-links a {
-    display: inline-block;
-    color: #0073e6;
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: bold;
-  }
-  
-  .about-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .about-contact {
-    margin-top: 5px;
-    font-size: 15px;
-  }
-  
-  /* Projects Section */
-  .projects-container {
+    border: 2px solid #0073e6;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#about .about-text {
+    flex: 1; /* text takes remaining space */
+}
+
+#about p,
+#about h2 {
+    margin: 5px 0;           /* spacing between lines */
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;  /* stack image and text vertically */
+        text-align: center;      /* center align text on mobile */
+    }
+
+    #about .profile-img {
+        margin-bottom: 15px;     /* spacing below image */
+    }
+}
+
+/* Projects Section */
+.projects-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-  }
-  
-  .project-card {
+}
+
+.project-card {
     flex: 1 1 45%;
     max-width: 45%;
     background: white;
@@ -107,29 +114,29 @@ body {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
-  }
-  
-  .project-card:hover {
+}
+
+.project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  }
-  
-  .project-card img {
+}
+
+.project-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-  }
-  
-  /* Skills Section - Horizontal 4 cards */
-  .skills-container {
+}
+
+/* Skills Section - Horizontal 4 cards */
+.skills-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: nowrap;
     margin-top: 20px;
-  }
-  
-  .skill-card {
+}
+
+.skill-card {
     flex: 1 1 22%; /* 4 cards in one row */
     max-width: 22%;
     min-width: 200px; 
@@ -139,56 +146,51 @@ body {
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
-  }
-  
-  .skill-card:hover {
+}
+
+.skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  }
-  
-  .skill-card ul {
+}
+
+.skill-card ul {
     margin: 10px 0 0 0;  /* top margin */
     padding-left: 12px;  /* bullet spacing from left */
     list-style-position: inside; /* bullet close to text */
     line-height: 1.6;    /* line spacing for readability */
-  }
-  
-  /* Certifications Section - Centered */
-  #certificate{
+}
+
+/* Certificates Section - Centered */
+#certifiate {
     text-align: center;
-  }
-  
-  #certificate.cert-img {
+}
+
+#certifiate .cert-img {
     display: block;
     margin: 15px auto;
-  }
-  
-  /* Contact Section - Centered */
-  #contact {
+}
+
+/* Contact Section - Centered */
+#contact {
     text-align: center;
-  }
-  
-  #contact p {
+}
+
+#contact p {
     font-size: 16px;
     margin: 5px 0;
-  }
-  
-  /* Certificate Image Hover */
-  .cert-img {
+}
+
+/* Certificate Image Hover */
+.cert-img {
     width: 200px;
     height: auto;
     margin: 15px;
     border-radius: 10px;
     border: 2px solid #ccc;
     transition: transform 0.3s;
-  }
-  
-  .cert-img:hover {
+}
+
+.cert-img:hover {
     transform: scale(1.1);
-  }
-
-  
-
-
-
+}
 
