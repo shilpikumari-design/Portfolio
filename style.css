@@ -53,33 +53,40 @@ h2 {
 }
 
 /* ----------------------------- */
+/* Section title center */
+.section-title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* ----------------------------- */
 /* About/Profile Section */
 #about .about-wrapper {
     display: flex;
-    align-items: flex-start; /* image top aligned with text */
-    gap: 80px;               /* space between image and text */
+    align-items: center; /* vertically center image with text */
+    gap: 80px;
     max-width: 1000px;
-    margin: 0 auto;          /* center section horizontally */
-    padding: 50px 0;         /* vertical padding */
+    margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 #about .profile-img {
-    width: 220px;            /* proper circle size */
+    width: 220px;
     height: 220px;
-    border-radius: 50%;      /* circular image */
-    object-fit: cover;       /* maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover;
     border: 2px solid #0073e6;
-    flex-shrink: 0;          /* prevent shrinking */
+    flex-shrink: 0;
 }
 
 #about .about-text {
-    flex: 1;                 /* text takes remaining space */
+    flex: 1;
 }
 
-#about .about-text h2,
 #about .about-text p {
     margin: 5px 0;
-    line-height: 1.7;        /* better readability */
+    line-height: 1.7;
 }
 
 #about .about-links a {
@@ -102,10 +109,10 @@ h2 {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     #about .about-wrapper {
-        flex-direction: column; /* stack image above text on mobile */
+        flex-direction: column;
         text-align: center;
         gap: 30px;
-        padding: 30px 0;
+        padding: 20px 0;
     }
 
     #about .profile-img {
