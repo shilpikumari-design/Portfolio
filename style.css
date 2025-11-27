@@ -40,7 +40,7 @@ section {
     width: 90%;
     max-width: 1000px;
     padding: 30px;
-    margin: 20px auto; /* center all sections */
+    margin: 20px auto;
     background: white;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
@@ -56,30 +56,30 @@ h2 {
 /* About/Profile Section */
 #about .about-wrapper {
     display: flex;
-    align-items: flex-start;
-    gap: 80px;          /* more space between image and text */
-    max-width: 1000px;  /* same as other sections */
-    margin: 0 auto;     /* center section */
-    padding: 30px 0;
+    align-items: flex-start;  /* align top of image and text */
+    gap: 100px;               /* space between image and text */
+    max-width: 1000px;
+    margin: 0 auto;           /* center section */
+    padding: 50px 0;          /* taller section */
 }
 
 #about .profile-img {
-    width: 200px;       /* slightly larger, professional */
-    height: 200px;
-    border-radius: 50%; /* circular */
-    object-fit: cover;  /* maintain aspect ratio */
+    width: 220px;             /* proper circle size */
+    height: 220px;
+    border-radius: 50%;       /* circular */
+    object-fit: cover;        /* maintain aspect ratio */
     border: 2px solid #0073e6;
-    flex-shrink: 0;
+    flex-shrink: 0;           /* prevent shrinking */
 }
 
 #about .about-text {
-    flex: 1;            /* text takes remaining space */
+    flex: 1;                  /* text takes remaining space */
 }
 
 #about .about-text h2,
 #about .about-text p {
     margin: 5px 0;
-    line-height: 1.6;   /* better readability */
+    line-height: 1.7;         /* better readability */
 }
 
 #about .about-links a {
@@ -102,15 +102,16 @@ h2 {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     #about .about-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* stack image above text on mobile */
         text-align: center;
-        gap: 30px;       /* smaller gap on mobile */
+        gap: 30px;
+        padding: 30px 0;
     }
 
     #about .profile-img {
+        width: 180px;         /* smaller on mobile */
+        height: 180px;
         margin-bottom: 20px;
-        width: 160px;    /* smaller on mobile */
-        height: 160px;
     }
 
     #about .about-text {
