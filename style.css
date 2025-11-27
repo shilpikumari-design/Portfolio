@@ -40,7 +40,7 @@ section {
     width: 90%;
     max-width: 1000px;
     padding: 30px;
-    margin: 20px 0;
+    margin: 20px auto; /* center all sections */
     background: white;
     border-radius: 12px;
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
@@ -53,44 +53,39 @@ h2 {
 }
 
 /* About Section */
-#about {
-    display: flex;           
-    align-items: flex-start; 
-    gap: 20px;               
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px 0;
-    text-align: left;        
+#about .about-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px; /* space between image and text */
 }
 
 #about .profile-img {
-    width: 150px;            
-    height: 150px;
-    border-radius: 50%;      
-    border: 2px solid #0073e6;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
     object-fit: cover;
+    border: 2px solid #0073e6;
     flex-shrink: 0;
 }
 
 #about .about-text {
-    flex: 1;                 
+    flex: 1;
 }
 
-#about p,
-#about h2 {
+#about .about-text h2,
+#about .about-text p {
     margin: 5px 0;
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-    #about {
+    #about .about-inner {
         flex-direction: column;
         text-align: center;
     }
 
     #about .profile-img {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 }
 
@@ -164,8 +159,8 @@ h2 {
 
 #certifiate .cert-img {
     display: block;
-    margin: 15px auto;  
-    width: 200px;       
+    margin: 15px auto;
+    width: 200px;
     height: auto;
     border-radius: 10px;
     border: 2px solid #ccc;
@@ -185,4 +180,3 @@ h2 {
     font-size: 16px;
     margin: 5px 0;
 }
-
