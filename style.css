@@ -77,7 +77,7 @@ h2 {
     overflow: hidden;    
     flex-shrink: 0;
     border: 2px solid #0073e6;
-    background-color: black; /* optional black background */
+    background-color: transparent; /* removed black background */
 }
 
 .profile-img-container img {
