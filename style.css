@@ -47,51 +47,31 @@ section {
   background: white;
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
 h2 {
-  color: #0073e6; /* heading blue color */
-  text-align: center;
+  color: #0073e6;
   margin-top: 0;
 }
 
-/* ---------------- Profile Section ---------------- */
-.about-wrapper {
+/* PROFILE SECTION */
+.profile-container {
   display: flex;
-  align-items: center;
-  gap: 30px; /* spacing between image and text */
-  justify-content: center;
-  margin-top: 20px;
+  align-items: flex-start;
+  gap: 25px;
 }
 
 .profile-img {
-  width: 180px; /* medium size */
+  width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #0073e6;
 }
 
 .about-text {
-  max-width: 520px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.4;
-}
-
-.about-text p {
-  margin-bottom: 6px;
-}
-
-.about-text .intro {
-  font-size: 23px;
-  font-weight: bold;
-}
-
-.highlight-heading {
-  font-size: 21px;
-  font-weight: bold;
-  margin: 10px 0 6px 0;
-  color: #0073e6;
 }
 
 /* Projects Section */
@@ -157,22 +137,22 @@ h2 {
   line-height: 1.6;
 }
 
-/* Certifications Section */
-.cert-img {
-  display: block;
-  width: 200px;
-  height: auto;
-  margin: 15px auto;
-  border-radius: 10px;
-  border: 2px solid #ccc;
-  transition: transform 0.3s;
+/* Certificate Section */
+.certificate-box {
+  text-align: center;
 }
 
-.cert-img:hover {
-  transform: scale(1.1);
+.cert-img {
+  width: 220px;
+  max-width: 60%;
+  border-radius: 8px;
 }
 
 /* Contact Section */
+#contact {
+  text-align: center;
+}
+
 #contact p {
   font-size: 16px;
   margin: 5px 0;
