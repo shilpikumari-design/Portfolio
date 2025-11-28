@@ -68,7 +68,7 @@ h2 {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .about-text {
@@ -160,3 +160,4 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
+
