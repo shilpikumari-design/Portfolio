@@ -1,244 +1,185 @@
 /* General */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f8f9fa;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Header */
 header {
-    background: #007acc;
-    padding: 15px 0;
-    width: 100%;
-    text-align: center;
-    color: white;
+  background: #007acc;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 nav button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: white;
-    color: #007acc;
-    cursor: pointer;
-    font-weight: bold;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: white;
+  color: #007acc;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 nav button:hover {
-    background: #005f99;
-    color: white;
+  background: #005f99;
+  color: white;
 }
 
 /* Sections */
 section {
-    width: 90%;
-    max-width: 1000px;
-    padding: 30px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    text-align: left;
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px;
+  margin: 20px 0;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 
-h2 {
-    color: #0073e6;
-    margin-top: 0;
+/* ---------------- Profile Section Updated ---------------- */
+#about {
+  text-align: center;
 }
 
-/* Center section title */
-.section-title {
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 40px;
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* spacing between image & text */
+  margin-top: 35px;
 }
 
-/* ----------------------------- */
-/* About/Profile Section */
-#about .section-title {
-    text-align: center;
+.profile-img {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  border: 3px solid #0073e6;
+  object-fit: cover;  /* no top crop */
+  object-position: top; /* makes whole head visible */
 }
 
-#about .about-wrapper {
-    display: flex;
-    align-items: flex-start;
-    gap: 60px;                
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-bottom: 50px;
+.about-text {
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.45;
+  max-width: 520px;
 }
 
-.profile-img-container {
-    width: 220px;        
-    height: 220px;
-    border-radius: 50%;  
-    overflow: hidden;    
-    flex-shrink: 0;
-    border: 2px solid #0073e6;
-    background-color: transparent; /* no black background */
-    display: flex;
-    align-items: center;   
-    justify-content: center; 
+.about-text p {
+  margin-bottom: 7px;
 }
 
-.profile-img-container img {
-    width: auto;        /* natural width */
-    height: 100%;       /* fill height of container */
-    object-fit: contain; /* full image visible */
-    object-position: center center; /* center in circle */
-    display: block;
+.about-text b {
+  font-size: 21px;
 }
 
-#about .about-text {
-    flex: 1;
+.highlight-heading {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 12px 0 6px 0;
+  color: #0073e6;
 }
 
-#about .about-text p {
-    margin: 5px 0;
-    line-height: 1.7;
-}
-
-#about .about-links a {
-    display: inline-block;
-    color: #0073e6;
-    text-decoration: none;
-    margin: 0 5px;
-    font-weight: bold;
-}
-
-#about .about-links a:hover {
-    text-decoration: underline;
-}
-
-#about .about-contact {
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-/* ----------------------------- */
-/* Projects Section */
+/* ---------------- Projects ---------------- */
 .projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .project-card {
-    flex: 1 1 45%;
-    max-width: 45%;
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
+  flex: 1 1 45%;
+  max-width: 45%;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* ----------------------------- */
-/* Skills Section */
+/* ---------------- Skills ---------------- */
 .skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
 }
 
 .skill-card {
-    flex: 1 1 22%;
-    max-width: 22%;
-    min-width: 200px;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
+  flex: 1 1 22%;
+  max-width: 22%;
+  min-width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .skill-card ul {
-    margin: 10px 0 0 0;
-    padding-left: 12px;
-    list-style-position: inside;
-    line-height: 1.6;
+  margin: 10px 0 0 0;
+  padding-left: 12px;
+  list-style-position: inside;
+  line-height: 1.6;
 }
 
-/* ----------------------------- */
-/* Certifications Section */
-#certifiate {
-    text-align: center;
+/* ---------------- Certificates ---------------- */
+#Certificate {
+  text-align: center;
 }
 
-#certifiate .cert-img {
-    display: block;
-    margin: 15px auto;
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    transition: transform 0.3s;
+.cert-img {
+  width: 200px;
+  height: auto;
+  margin: 15px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  transition: transform 0.3s;
 }
 
 .cert-img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-/* ----------------------------- */
-/* Contact Section */
+/* ---------------- Contact ---------------- */
 #contact {
-    text-align: center;
+  text-align: center;
 }
 
 #contact p {
-    font-size: 16px;
-    margin: 5px 0;
-}
-
-/* ----------------------------- */
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    #about .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-        padding: 20px 0;
-    }
-
-    .profile-img-container {
-        width: 180px;
-        height: 180px;
-        margin-bottom: 20px;
-    }
-
-    #about .about-text {
-        text-align: center;
-    }
-
-    .skills-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  font-size: 16px;
+  margin: 5px 0;
 }
