@@ -1,102 +1,82 @@
-/* General Page Styling */
+/* General */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f6fc;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Header */
 header {
-  background-color: #0073e6;
-  color: white;
-  padding: 20px 0;
+  background: #007acc;
+  padding: 15px 0;
+  width: 100%;
   text-align: center;
+  color: white;
 }
 
-/* Navigation Buttons */
+header h1 {
+  margin: 0;
+}
+
 nav button {
-  margin: 5px;
-  padding: 8px 15px;
+  margin: 0 10px;
+  padding: 10px 20px;
   border: none;
-  background-color: white;
-  color: #0073e6;
-  border-radius: 20px;
+  border-radius: 5px;
+  background: white;
+  color: #007acc;
   cursor: pointer;
   font-weight: bold;
 }
 
 nav button:hover {
-  background-color: #e2e2e2;
+  background: #005f99;
+  color: white;
 }
 
-/* Section Cards */
-.section {
-  width: 75%;
-  margin: 30px auto;
+/* Sections */
+section {
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px;
+  margin: 20px 0;
   background: white;
-  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  text-align: left;
 }
 
-.section h2 {
-  text-align: center;
+h2 {
   color: #0073e6;
-  margin-bottom: 22px;
+  text-align: center; /* headings centered */
+  margin-top: 0;
 }
 
-/* PROFILE SECTION - CENTERED & PROFESSIONAL */
-.about-content {
+/* PROFILE SECTION */
+.profile-container {
   display: flex;
-  align-items: center;       /* vertical alignment of photo & text */
-  justify-content: center;   /* center the whole section horizontally */
-  gap: 50px;                 /* space between photo & text */
-  padding: 60px 20px;        /* top/bottom padding to push section down */
-  flex-wrap: wrap;           /* responsive for smaller screens */
-  text-align: left;          /* text aligned left next to photo */
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-/* Profile Photo */
-.profile img {
-  width: 240px;             /* slightly wider */
-  height: 240px;
+.profile-img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  display: block;
 }
 
-/* Profile Text */
 .about-text {
-  max-width: 600px;         /* controls text width */
-}
-
-.about-text p {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
-  margin: 8px 0;
 }
 
-/* Responsive for smaller screens */
-@media screen and (max-width: 800px) {
-  .about-content {
-    flex-direction: column;    /* stack photo & text vertically */
-    align-items: center;       /* center items when stacked */
-    text-align: center;
-    gap: 25px;
-  }
-
-  .about-text {
-    max-width: 100%;
-  }
-
-  .profile img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-/* PROJECT CARDS */
+/* Projects Section */
 .projects-container {
   display: flex;
   justify-content: center;
@@ -105,38 +85,78 @@ nav button:hover {
 }
 
 .project-card {
-  width: 380px;
+  flex: 1 1 45%;
+  max-width: 45%;
   background: white;
-  padding: 18px;
-  border-radius: 10px;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: left;
-  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-/* CERTIFICATE IMAGE */
-.certificate-img {
-  display: block;
-  margin: auto;
-  width: 350px;
+  height: auto;
   border-radius: 10px;
 }
 
-/* SKILLS Styling */
-.skills-list {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.7;
+/* Skills Section */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
 }
 
-/* CONTACT */
-.contact-info {
+.skill-card {
+  flex: 1 1 22%;
+  max-width: 22%;
+  min-width: 200px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.skill-card ul {
+  margin: 10px 0 0 0;
+  padding-left: 12px;
+  list-style-position: inside;
+  line-height: 1.6;
+}
+
+/* Certificate Section */
+.certificate-box {
   text-align: center;
-  font-size: 18px;
-  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.cert-img {
+  width: 220px;
+  max-width: 60%;
+  border-radius: 8px;
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+}
+
+#contact p {
+  font-size: 16px;
+  margin: 5px 0;
 }
