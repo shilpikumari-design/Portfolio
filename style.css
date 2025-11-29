@@ -65,11 +65,15 @@ h2 {
 }
 
 .profile-img {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center; /* <-- ensures top part of face is visible */
+  flex-shrink: 0;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
 }
+
 
 .about-text {
   font-size: 18px;
@@ -160,3 +164,4 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
+
