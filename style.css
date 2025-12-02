@@ -97,7 +97,7 @@ h2 {
   }
 
   .about-text {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .profile-img {
@@ -211,4 +211,3 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
-
