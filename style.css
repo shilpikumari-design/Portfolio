@@ -56,12 +56,13 @@ h2 {
   margin-top: 0;
 }
 
-/* PROFILE SECTION */
+/* PROFILE SECTION - LEFT PHOTO, CENTERED VERTICALLY, TEXT ON RIGHT */
 .profile-container {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  margin-top: 20px;
+  align-items: center;        /* vertical center alignment */
+  gap: 40px;                  /* space between photo & text */
+  margin-top: 40px;           /* pushes section slightly down */
+  flex-wrap: wrap;            /* responsive for small screens */
 }
 
 .profile-img {
@@ -75,9 +76,34 @@ h2 {
 }
 
 
+
+
 .about-text {
   font-size: 18px;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 600px;           /* control text width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertically align text with photo */
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 800px) {
+  .profile-container {
+    flex-direction: column;   /* stack photo & text vertically */
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 /* Projects Section */
@@ -145,15 +171,35 @@ h2 {
 
 /* Certificate Section */
 .certificate-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.cert-card {
   text-align: center;
-  margin-top: 20px;
+  width: 260px;
 }
 
 .cert-img {
-  width: 220px;
-  max-width: 60%;
-  border-radius: 8px;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
 }
+
+.cert-img:hover {
+  transform: scale(1.05);
+}
+
+.cert-card p {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
 
 /* Contact Section */
 #contact {
@@ -164,5 +210,3 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
-
-
