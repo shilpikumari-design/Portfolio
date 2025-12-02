@@ -173,7 +173,7 @@ h2 {
 .certificate-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
   justify-content: center;
 }
 
@@ -211,3 +211,4 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
+
