@@ -105,6 +105,23 @@ h2 {
     height: 160px;
   }
 }
+/* PROFILE TEXT — FIX LINE GAP & LINK ALIGNMENT ONLY */
+#about p {
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+/* Trailhead | LinkedIn links style */
+.profile-link {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 500;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
 
 /* Projects Section */
 .projects-container {
@@ -211,5 +228,6 @@ h2 {
   font-size: 16px;
   margin: 5px 0;
 }
+
 
 
